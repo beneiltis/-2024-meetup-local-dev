@@ -32,7 +32,7 @@
 go run main.go
 
 # TEST
-curl localhost:8080/healtz | jq
+curl -s http://localhost:8080/healthz | jq
 
 # JUST IN CASE
 sudo lsof -i :8080
