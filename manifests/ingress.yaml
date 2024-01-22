@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: meetup-ingress
+  namespace: default
+spec:
+  ingressClassName: traefik
+  rules:
+  - host:  meetup.local.mogenius.io
+    http:
+      paths:
+      - backend:
+          service:
+            name: meetup-service
+            port:
+              number: 8080
+        path: /
+        pathType: Prefix
+  tls:
+  - hosts:
+    - meetup.local.mogenius.io
+    secretName: meetup-secret

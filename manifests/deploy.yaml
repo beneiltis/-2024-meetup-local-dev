@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: meetup-operator
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: meetup-operator
+  template:
+    metadata:
+      labels:
+        app: meetup-operator
+    spec:
+      containers:
+      - image: ghcr.io/mogenius/mogenius:latest
+        imagePullPolicy: IfNotPresent
+        name: meetup-operator

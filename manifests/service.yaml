@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: meetup-service
+  namespace: default
+spec:
+  ports:
+  - name: 8080-meetup-service
+    port: 80
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: meetup-operator
+  type: ClusterIP
