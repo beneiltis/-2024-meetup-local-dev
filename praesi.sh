@@ -31,7 +31,7 @@ echo ""
 echo ""
 echo -e "\033[1mBenedikt Iltisberger\033[0m"
 echo ""
-imgcat bene-head.png --width=30
+imgcat assets/bene-head.png --width=30
 echo -e "Age:\t\t 40"
 echo -e "From:\t\t Neuss/Germany"
 echo -e "Job:\t\t DevOps Engineer, Software Developer"
@@ -55,7 +55,7 @@ echo ""
 echo ""
 echo "I'm working at"
 echo ""
-imgcat mogenius.png --width=80
+imgcat assets/mogenius.png --width=80
 echo ""
 echo ""
 echo ""
@@ -69,10 +69,10 @@ echo ""
 echo -e "\033[1mLet ChatGPT do my work:\033[0m"
 echo ""
 echo ""
-echo " => \"Please create a diagram explaining what Kubernetes Local Dev Environments look like\"."
+echo " => \"Please create an image explaining what Kubernetes Local Dev Environments look like\"."
 read -p ""
 printf "%35s"
-imgcat ai-please-do-the-work-for-me.png --width=60
+imgcat assets/ai-please-do-the-work-for-me.png --width=60
 echo ""
 echo ""
 read -p "Press ENTER to continue..."
@@ -81,12 +81,12 @@ clear
 echo ""
 echo ""
 echo ""
-echo -e "\033[1mWTF? Please create the diagram less positive!\033[0m"
+echo -e "\033[1mWTF? Please create the image less positive and present just facts!\033[0m"
 echo ""
 echo ""
 read -p ""
 printf "%35s"
-imgcat ai-please-do-the-work-for-me-less-positive.png --width=60
+imgcat assets/ai-please-do-the-work-for-me-less-positive.png --width=60
 echo ""
 echo ""
 read -p "Press ENTER to continue..."
@@ -108,7 +108,7 @@ echo "   =>  when you just focus on your container you are missing k8s essential
 read -p ""
 echo "       - configmaps, services, secrets, ingresses, pv's, pvc's, storageclasses, etc."
 read -p ""
-echo "   =>  Networking is way more complex (VPNs, Firewalls, etc.)"
+echo "   =>  Networking is way more complex (VPNs, Firewalls, Permissions, etc.)"
 read -p ""
 echo "   =>  So what is different on localhost?"
 read -p ""
@@ -132,7 +132,7 @@ echo ""
 echo ""
 echo -e "\033[1mDemo Time ...\033[0m"
 echo ""
-imgcat demo-time.png --width=80
+imgcat assets/demo-time.png --width=80
 read -p "Press ENTER to continue..."
 
 clear 
@@ -253,28 +253,40 @@ echo ""
 echo ""
 echo "   🔍 k9s"
 echo "   ⚠️  update image + imagePullPolicy"
+echo "   🏠  http://localhost:8080/healthz"
+echo "   🌍  https://meetup.local.mogenius.io/healthz"
+echo ""
+echo ""
+echo ""
+echo ""
 echo ""
 echo ""
 echo ""
 read -p "Press ENTER to continue..."
 
 
-#
-# DNS SETUP
-# Rebuild image, update and restart Deployment
-#
-#
-#
-#
-#
-#
-#
-#
-#
+
+clear
+echo ""
+echo ""
+echo ""
+echo -e "\033[1mWhat is the magic behind this?\033[0m"
+echo ""
+echo ""
+echo ""
+bat misc/network.sh
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+read -p "Press ENTER to continue..."
 
 clear 
 figlet -w $(tput cols) -c "Always    keep    your"
 figlet -w $(tput cols) -c "helmet    on"
 printf "%40s"
-imgcat the-end.png --width=50
+imgcat assets/the-end.png --width=50
 read -p ""
