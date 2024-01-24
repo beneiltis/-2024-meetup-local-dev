@@ -171,9 +171,9 @@ echo -e "\033[1mDemo time ...\033[0m"
 echo ""
 imgcat assets/demo-time.png --width=60
 echo " - Create a simple operator"
-echo " - Create a container"
-echo " - Create/Apply Kubernetes Manifests in KinD"
-echo " - Let us check out what we got"
+echo " - Containerize the operator"
+echo " - Make it run in KinD"
+echo " - Work with it locally"
 echo ""
 echo ""
 echo ""
@@ -196,6 +196,7 @@ read -p "Press ENTER to continue..."
 echo ""
 echo ""
 
+echo "$ go run main.go"
 cd go
 go run main.go
 cd ..
@@ -279,6 +280,7 @@ echo ""
 echo "$ kubectl apply -f manifests/deploy.yaml
 $ kubectl apply -f manifests/service.yaml
 $ kubectl apply -f manifests/ingress.yaml"
+echo ""
 kubectl apply -f manifests/deploy.yaml
 kubectl apply -f manifests/service.yaml
 kubectl apply -f manifests/ingress.yaml
@@ -361,7 +363,7 @@ echo ""
 read -p "Press ENTER to continue..."
 
 clear 
-figlet -w $(tput cols) -c "End the End: WTF CHATGPT?"
+figlet -w $(tput cols) -c "WTF ChatGPT ?"
 read -p ""
 printf "%40s"
 imgcat assets/the-end.png --width=45
